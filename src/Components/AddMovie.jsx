@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 const AddMovie = ({ handleAddMovie }) => {
   const [newMovie, setNewMovie] = useState({
     title: "",

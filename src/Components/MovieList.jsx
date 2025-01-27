@@ -1,11 +1,16 @@
 import React from "react";
 import MovieCard from "./MovieCard";
 
+
+////////////////};
+
 const MovieList = ({ movies }) => {
   return (
-    <div>
+    <div className="movies-container">
       {movies.map((movie, index) => (
-        <MovieCard key={index} movie={movie} />
+        <div key={index} className="movie-card">
+          <MovieCard movie={movie} />
+        </div>
       ))}
     </div>
   );

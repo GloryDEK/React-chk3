@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Filter = ({ setFilter }) => {
   const handleTitleChange = (e) => {
     setFilter((prev) => ({ ...prev, title: e.target.value }));
@@ -21,6 +22,13 @@ const Filter = ({ setFilter }) => {
         placeholder="Note minimale"
         onChange={handleRatingChange}
       />
+
+    <input
+      type="number"
+      placeholder="Filtrer par ID"
+      onChange={(e) => setFilter((prev) => ({ ...prev, id: Number(e.target.value) || null }))}
+    />
+
     </div>
   );
 };
